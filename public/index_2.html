@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colebourn Consulting — Power Systems & Operational Technology</title>
+<meta name="description" content="Colebourn Consulting: power systems and operational technology consulting. Website under construction.">
+<style>
+  :root { --ink: #0b2545; --blue: #0b5fa5; --muted: #51657d; --line: #d5dfe9; --hv: #f2c200; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: #fff; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; border-top: 6px solid var(--hv); }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; border-bottom: 1px solid var(--line); }
+  .brand { display: flex; align-items: center; gap: .6rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: .95rem; }
+  .brand svg { width: 30px; height: 30px; }
+  .linkedin { color: var(--blue); text-decoration: none; font-size: .85rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+  .linkedin:hover { text-decoration: underline; }
+  .hero { text-align: center; padding: 3rem 1.5rem 1.5rem; }
+  .hero h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); text-transform: uppercase; letter-spacing: .1em; }
+  .hero h1 span { color: var(--blue); }
+  .hero p { margin-top: .5rem; color: var(--muted); letter-spacing: .18em; text-transform: uppercase; font-size: .75rem; }
+  .status { display: inline-block; margin-top: 1.2rem; padding: .3rem .9rem; border: 1px solid var(--ink); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; }
+  nav { display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; border-bottom: 1px solid var(--line); }
+  nav button { background: none; border: 0; border-bottom: 3px solid transparent; padding: .7rem .2rem; font: inherit; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); cursor: pointer; }
+  nav button:hover { color: var(--ink); }
+  nav button[aria-selected="true"] { color: var(--ink); font-weight: 700; border-bottom-color: var(--blue); }
+  main { flex: 1; width: 100%; max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem; }
+  section[hidden] { display: none; }
+  h2 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 1rem; }
+  p { margin-bottom: 1rem; color: #223a57; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: .5rem; color: #223a57; }
+  li b { color: var(--ink); }
+  a { color: var(--blue); }
+  footer { text-align: center; padding: 1.2rem; font-size: .78rem; color: var(--muted); border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#0b2545" stroke-width="2" aria-hidden="true">
+        <circle cx="20" cy="20" r="16"/>
+        <path d="M9 21c3.5-8 7-8 11 0s7.5 8 11 0" stroke="#0b5fa5" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      Colebourn Consulting
+    </div>
+    <a class="linkedin" href="https://www.linkedin.com/in/anthony-colebourn-32a14228/" target="_blank" rel="noopener">LinkedIn</a>
+  </header>
+
+  <div class="hero">
+    <h1>Colebourn <span>Consulting</span></h1>
+    <p>Power Systems &bull; Operational Technology</p>
+    <div class="status">Website under construction</div>
+  </div>
+
+  <nav role="tablist" aria-label="Site sections">
+    <button role="tab" id="tab-about" aria-controls="about" aria-selected="true">About Us</button>
+    <button role="tab" id="tab-capabilities" aria-controls="capabilities" aria-selected="false">Capabilities</button>
+    <button role="tab" id="tab-contact" aria-controls="contact" aria-selected="false">Contact Us</button>
+  </nav>
+
+  <main>
+    <section role="tabpanel" id="about" aria-labelledby="tab-about">
+      <h2>About Us</h2>
+      <p>Colebourn Consulting provides independent advice to electricity network and energy sector organisations navigating the shift to a digital, decentralised grid.</p>
+      <p>With deep experience across network operations, planning and operational technology, we help clients make practical, well-grounded decisions on technology, risk and regulation.</p>
+    </section>
+
+    <section role="tabpanel" id="capabilities" aria-labelledby="tab-capabilities" hidden>
+      <h2>Capabilities</h2>
+      <ul>
+        <li><b>Operational technology:</b> ADMS, SCADA and secondary systems strategy and delivery</li>
+        <li><b>Network planning:</b> asset and network planning for evolving load and generation</li>
+        <li><b>DER integration:</b> DERMS strategy, dynamic operating envelopes, grid visibility</li>
+        <li><b>Cyber security:</b> OT security uplift, SOCI Act and AESCSF alignment</li>
+        <li><b>Regulatory affairs:</b> AER, AEMO and National Electricity Rules obligations</li>
+        <li><b>Grid transformation:</b> roadmaps and business cases for digital grid programs</li>
+      </ul>
+    </section>
+
+    <section role="tabpanel" id="contact" aria-labelledby="tab-contact" hidden>
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:hello@colebournconsulting.com.au">hello@colebournconsulting.com.au</a><br>
+      LinkedIn: <a href="https://www.linkedin.com/in/anthony-colebourn-32a14228/" target="_blank" rel="noopener">Anthony Colebourn</a><br>
+      Location: Sydney, NSW, Australia</p>
+    </section>
+  </main>
+
+  <footer>&copy; <span id="yr"></span> Colebourn Consulting</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  function show(tab, focus) {
+    tabs.forEach(t => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', on);
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus();
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => { show(t); history.replaceState(null, '', '#' + t.getAttribute('aria-controls')); });
+    t.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') show(tabs[(i + 1) % tabs.length], true);
+      if (e.key === 'ArrowLeft') show(tabs[(i - 1 + tabs.length) % tabs.length], true);
+    });
+  });
+  const initial = tabs.find(t => '#' + t.getAttribute('aria-controls') === location.hash);
+  if (initial) show(initial);
+</script>
+</body>
+</html>
